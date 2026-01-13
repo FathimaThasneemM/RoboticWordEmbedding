@@ -23,8 +23,7 @@ Run the scripts in the following order:
 - Learning Rates Tested:0.1, 0.01, 0.001
 
 4. Project Files
-- `vocab.txt`: Word IDs and frequencies.
-- `cbow_dataset.csv` / `skipgram_dataset.csv`: Generated training pairs.
-- `loss_*.txt`: Training loss logs for convergence analysis.
-- `embeddings_*.csv`: The learned 10-D weight matrices.
-- `similarity_results.txt`: Top-5 nearest neighbors for query words.
+-dataset_builder.py: Cleans the corpus (lowercase, no punctuation) and creates cbow_dataset.csv and skipgram_dataset.csv.
+-train_cbow.py: Trains a model with a 10-unit linear hidden layer to learn CBOW embeddings.
+-train_skipgram.py: Trains a model to learn Skip-gram embeddings.
+-evaluate_embeddings.py: Uses Cosine Similarity to find the most similar words for queries like "robot" and "lidar".
